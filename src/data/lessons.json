@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "title": "Home Row: F and J",
+    "description": "Place your index fingers on F and J. Feel the bumps!",
+    "keys": ["f", "j"],
+    "fingers": { "f": "left-index", "j": "right-index" },
+    "lines": [
+      "f j f j f j f j",
+      "j f j f j f j f",
+      "f f j j f f j j",
+      "j j f f j j f f"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Home Row: D and K",
+    "description": "Add your middle fingers on D and K.",
+    "keys": ["d", "k", "f", "j"],
+    "fingers": { "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
+    "lines": [
+      "d k d k d k d k",
+      "f d k j f d k j",
+      "dk jf dk jf dk jf",
+      "fd kj fd kj fd kj"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Home Row: S and L",
+    "description": "Add your ring fingers on S and L.",
+    "keys": ["s", "l", "d", "k", "f", "j"],
+    "fingers": { "s": "left-ring", "l": "right-ring", "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
+    "lines": [
+      "s l s l s l s l",
+      "s d f j k l s l",
+      "sl dk fj sl dk fj",
+      "fds jkl fds jkl"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Home Row: A and ;",
+    "description": "Add your pinky fingers on A and semicolon.",
+    "keys": ["a", ";", "s", "l", "d", "k", "f", "j"],
+    "fingers": { "a": "left-pinky", ";": "right-pinky", "s": "left-ring", "l": "right-ring", "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
+    "lines": [
+      "a ; a ; a ; a ;",
+      "a s d f j k l ;",
+      "asdf jkl; asdf jkl;",
+      "; l k j f d s a"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Home Row Mastery",
+    "description": "Practice all home row keys together.",
+    "keys": ["a", "s", "d", "f", "j", "k", "l", ";"],
+    "fingers": { "a": "left-pinky", "s": "left-ring", "d": "left-middle", "f": "left-index", "j": "right-index", "k": "right-middle", "l": "right-ring", ";": "right-pinky" },
+    "lines": [
+      "add a sad fall ask",
+      "all dad fall lass flask",
+      "as fall lads ask fads",
+      "a sad lad asks a lass"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Top Row: E and I",
+    "description": "Reach up from D and K to type E and I.",
+    "keys": ["e", "i", "d", "k", "f", "j"],
+    "fingers": { "e": "left-middle", "i": "right-middle" },
+    "lines": [
+      "e i e i e i e i",
+      "de ki de ki de ki",
+      "fed jik fed jik",
+      "fie die fie die"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Top Row: R and U",
+    "description": "Reach up from F and J to type R and U.",
+    "keys": ["r", "u", "e", "i", "d", "k", "f", "j"],
+    "fingers": { "r": "left-index", "u": "right-index" },
+    "lines": [
+      "r u r u r u r u",
+      "fr ju fr ju fr ju",
+      "rue fur rue fur rue",
+      "rude dure rude dure"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Top Row: W and O",
+    "description": "Reach up from S and L to type W and O.",
+    "keys": ["w", "o", "r", "u", "e", "i"],
+    "fingers": { "w": "left-ring", "o": "right-ring" },
+    "lines": [
+      "w o w o w o w o",
+      "sw lo sw lo sw lo",
+      "owe woe owe woe",
+      "wore word wore word"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Top Row: Q and P",
+    "description": "Reach up from A and ; to type Q and P.",
+    "keys": ["q", "p", "w", "o", "r", "u", "e", "i"],
+    "fingers": { "q": "left-pinky", "p": "right-pinky" },
+    "lines": [
+      "q p q p q p q p",
+      "aq ;p aq ;p aq ;p",
+      "pew quick pew quick",
+      "rope pour rope pour"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Top Row Words",
+    "description": "Practice real words using top and home rows.",
+    "keys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "j", "k", "l", ";"],
+    "fingers": {},
+    "lines": [
+      "word rope pour quip",
+      "fire wide joke lure",
+      "pure disk folk asker",
+      "work hard type well"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Bottom Row: V and M",
+    "description": "Reach down from F and J to type V and M.",
+    "keys": ["v", "m", "f", "j"],
+    "fingers": { "v": "left-index", "m": "right-index" },
+    "lines": [
+      "v m v m v m v m",
+      "fv jm fv jm fv jm",
+      "vim vim vim vim",
+      "move vim move vim"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Bottom Row: C and Comma",
+    "description": "Reach down from D and K to type C and comma.",
+    "keys": ["c", ",", "v", "m"],
+    "fingers": { "c": "left-middle", ",": "right-middle" },
+    "lines": [
+      "c , c , c , c ,",
+      "dc k, dc k, dc k,",
+      "civic,mic, civic,",
+      "come, make, come,"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Bottom Row: X and Period",
+    "description": "Reach down from S and L for X and period.",
+    "keys": ["x", ".", "c", ","],
+    "fingers": { "x": "left-ring", ".": "right-ring" },
+    "lines": [
+      "x . x . x . x .",
+      "sx l. sx l. sx l.",
+      "fix. mix. fix. mix.",
+      "next. exit. next."
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Bottom Row: Z and Slash",
+    "description": "Reach down from A and ; for Z and slash.",
+    "keys": ["z", "/", "x", "."],
+    "fingers": { "z": "left-pinky", "/": "right-pinky" },
+    "lines": [
+      "z / z / z / z /",
+      "az ;/ az ;/ az ;/",
+      "zero/zip zero/zip",
+      "fizz/buzz fizz/buzz"
+    ]
+  },
+  {
+    "id": 15,
+    "title": "T and Y - Index Reach",
+    "description": "Reach up-center from F and J for T and Y.",
+    "keys": ["t", "y"],
+    "fingers": { "t": "left-index", "y": "right-index" },
+    "lines": [
+      "t y t y t y t y",
+      "ft jy ft jy ft jy",
+      "try yet try yet",
+      "they type they type"
+    ]
+  },
+  {
+    "id": 16,
+    "title": "G and H - Index Center",
+    "description": "Reach inward from F and J for G and H.",
+    "keys": ["g", "h"],
+    "fingers": { "g": "left-index", "h": "right-index" },
+    "lines": [
+      "g h g h g h g h",
+      "fg jh fg jh fg jh",
+      "high high high",
+      "ghost the ghost the"
+    ]
+  },
+  {
+    "id": 17,
+    "title": "B and N - Index Reach Down",
+    "description": "Reach down-center from F and J for B and N.",
+    "keys": ["b", "n"],
+    "fingers": { "b": "left-index", "n": "right-index" },
+    "lines": [
+      "b n b n b n b n",
+      "fb jn fb jn fb jn",
+      "bind bond bind bond",
+      "brown noun brown noun"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Full Alphabet",
+    "description": "You know all the letters! Practice common words.",
+    "keys": ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
+    "fingers": {},
+    "lines": [
+      "the quick brown fox",
+      "jumps over the lazy",
+      "dog and cat play with",
+      "joy every single day"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Common Words",
+    "description": "Type the most common English words.",
+    "keys": [],
+    "fingers": {},
+    "lines": [
+      "the of and to in is",
+      "you that it he was for",
+      "on are as with his they",
+      "at be this from or one"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Numbers Row: 1-5",
+    "description": "Reach up from the top row for numbers 1 through 5.",
+    "keys": ["1","2","3","4","5"],
+    "fingers": { "1": "left-pinky", "2": "left-ring", "3": "left-middle", "4": "left-index", "5": "left-index" },
+    "lines": [
+      "1 2 3 4 5 1 2 3 4 5",
+      "11 22 33 44 55",
+      "123 321 123 321",
+      "12345 54321 12345"
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Numbers Row: 6-0",
+    "description": "Reach up from the top row for numbers 6 through 0.",
+    "keys": ["6","7","8","9","0"],
+    "fingers": { "6": "right-index", "7": "right-index", "8": "right-middle", "9": "right-ring", "0": "right-pinky" },
+    "lines": [
+      "6 7 8 9 0 6 7 8 9 0",
+      "66 77 88 99 00",
+      "678 987 678 987",
+      "67890 09876 67890"
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Sentences",
+    "description": "Type complete sentences with proper spacing.",
+    "keys": [],
+    "fingers": {},
+    "lines": [
+      "I like to type fast.",
+      "Practice makes perfect.",
+      "Keep your eyes on screen.",
+      "Type with all ten fingers."
+    ]
+  }
+]
