@@ -2,6 +2,7 @@ import { useState } from 'react'
 import UserSelect from './components/UserSelect'
 import LessonMap from './components/LessonMap'
 import TypingLesson from './components/TypingLesson'
+import AboutLeaf from './components/AboutLeaf'
 import { getUserSetting, setUserSetting } from './utils/storage'
 
 function applyTheme(theme) {
@@ -34,28 +35,28 @@ export default function App() {
     applyTheme('system')
   }
 
-  if (!user) return <UserSelect onSelect={handleSelectUser} />
+  if (!user) return <><UserSelect onSelect={handleSelectUser} /><AboutLeaf /></>
 
   if (lessonId) {
     return (
-      <TypingLesson
+      <><TypingLesson
         lessonId={lessonId}
         user={user}
         theme={theme}
         onThemeChange={handleThemeChange}
         onBack={() => setLessonId(null)}
         onComplete={() => setLessonId(null)}
-      />
+      /><AboutLeaf /></>
     )
   }
 
   return (
-    <LessonMap
+    <><LessonMap
       user={user}
       theme={theme}
       onThemeChange={handleThemeChange}
       onSelectLesson={setLessonId}
       onLogout={handleLogout}
-    />
+    /><AboutLeaf /></>
   )
 }
