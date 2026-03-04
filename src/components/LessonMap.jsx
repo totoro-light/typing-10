@@ -25,7 +25,7 @@ function initials(name) {
 
 export default function LessonMap({ user, theme, onThemeChange, onSelectLesson, onLogout }) {
   const userData = getUserData(user)
-  const { completedLessons, currentLesson } = userData
+  const { completedLessons } = userData
   const doneCount = Object.keys(completedLessons).length
   const pct = Math.round((doneCount / lessons.length) * 100)
 
@@ -65,7 +65,6 @@ export default function LessonMap({ user, theme, onThemeChange, onSelectLesson, 
       <div className="lessons-grid">
         {lessons.map(lesson => {
           const done = !!completedLessons[lesson.id]
-          const unlocked = lesson.id <= currentLesson
           const stats = completedLessons[lesson.id]
           const color = cardColor(lesson.id)
 
@@ -74,8 +73,7 @@ export default function LessonMap({ user, theme, onThemeChange, onSelectLesson, 
               key={lesson.id}
               className={`lesson-card ${done ? 'done' : ''}`}
               style={{ '--card-color': color }}
-              onClick={() => unlocked && onSelectLesson(lesson.id)}
-              disabled={!unlocked}
+              onClick={() => onSelectLesson(lesson.id)}
             >
               <div className="lc-badge">
                 {done ? '✓' : lesson.id}
@@ -85,7 +83,6 @@ export default function LessonMap({ user, theme, onThemeChange, onSelectLesson, 
                 {done && stats && (
                   <div className="lc-stats">⭐ {stats.wpm} WPM · {stats.accuracy}%</div>
                 )}
-                {!unlocked && <div className="lc-locked">🔒 Complete previous lesson</div>}
               </div>
               {done && <div className="lc-check">✓</div>}
             </button>

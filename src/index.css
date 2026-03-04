@@ -424,7 +424,6 @@ button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px }
   box-shadow: var(--shadow-lg);
   border-color: var(--card-color, var(--blue));
 }
-.lesson-card:disabled { opacity: .42; cursor: not-allowed; transform: none !important }
 .lesson-card.done { background: color-mix(in srgb, var(--card-color, var(--green)) 6%, var(--surface)) }
 
 .lc-badge {
@@ -452,11 +451,6 @@ button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px }
   color: var(--card-color, var(--blue));
   margin-top: 3px;
   font-weight: 600;
-}
-.lc-locked {
-  font-size: .78rem;
-  color: var(--text-muted);
-  margin-top: 3px;
 }
 
 .lc-check {

@@ -44,9 +44,6 @@ export function completeLesson(name, lessonId, stats) {
     ...stats,
     completedAt: Date.now(),
   }
-  if (lessonId >= data.currentLesson) {
-    data.currentLesson = lessonId + 1
-  }
   saveUserData(name, data)
 }
 
