@@ -1,288 +1,388 @@
 [
   {
-    "id": 1,
+    "id": 1, "category": "beginner",
     "title": "Home Row: F and J",
     "description": "Place your index fingers on F and J. Feel the bumps!",
     "keys": ["f", "j"],
     "fingers": { "f": "left-index", "j": "right-index" },
-    "lines": [
-      "f j f j f j f j",
-      "j f j f j f j f",
-      "f f j j f f j j",
-      "j j f f j j f f"
-    ]
+    "lines": ["f j f j f j f j", "j f j f j f j f", "f f j j f f j j", "j j f f j j f f"]
   },
   {
-    "id": 2,
+    "id": 2, "category": "beginner",
     "title": "Home Row: D and K",
     "description": "Add your middle fingers on D and K.",
     "keys": ["d", "k", "f", "j"],
     "fingers": { "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
-    "lines": [
-      "d k d k d k d k",
-      "f d k j f d k j",
-      "dk jf dk jf dk jf",
-      "fd kj fd kj fd kj"
-    ]
+    "lines": ["d k d k d k d k", "f d k j f d k j", "dk jf dk jf dk jf", "fd kj fd kj fd kj"]
   },
   {
-    "id": 3,
+    "id": 3, "category": "beginner",
     "title": "Home Row: S and L",
     "description": "Add your ring fingers on S and L.",
     "keys": ["s", "l", "d", "k", "f", "j"],
     "fingers": { "s": "left-ring", "l": "right-ring", "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
-    "lines": [
-      "s l s l s l s l",
-      "s d f j k l s l",
-      "sl dk fj sl dk fj",
-      "fds jkl fds jkl"
-    ]
+    "lines": ["s l s l s l s l", "s d f j k l s l", "sl dk fj sl dk fj", "fds jkl fds jkl"]
   },
   {
-    "id": 4,
+    "id": 4, "category": "beginner",
     "title": "Home Row: A and ;",
     "description": "Add your pinky fingers on A and semicolon.",
     "keys": ["a", ";", "s", "l", "d", "k", "f", "j"],
     "fingers": { "a": "left-pinky", ";": "right-pinky", "s": "left-ring", "l": "right-ring", "d": "left-middle", "k": "right-middle", "f": "left-index", "j": "right-index" },
-    "lines": [
-      "a ; a ; a ; a ;",
-      "a s d f j k l ;",
-      "asdf jkl; asdf jkl;",
-      "; l k j f d s a"
-    ]
+    "lines": ["a ; a ; a ; a ;", "a s d f j k l ;", "asdf jkl; asdf jkl;", "; l k j f d s a"]
   },
   {
-    "id": 5,
+    "id": 5, "category": "beginner",
     "title": "Home Row Mastery",
     "description": "Practice all home row keys together.",
     "keys": ["a", "s", "d", "f", "j", "k", "l", ";"],
     "fingers": { "a": "left-pinky", "s": "left-ring", "d": "left-middle", "f": "left-index", "j": "right-index", "k": "right-middle", "l": "right-ring", ";": "right-pinky" },
-    "lines": [
-      "add a sad fall ask",
-      "all dad fall lass flask",
-      "as fall lads ask fads",
-      "a sad lad asks a lass"
-    ]
+    "lines": ["add a sad fall ask", "all dad fall lass flask", "as fall lads ask fads", "a sad lad asks a lass"]
   },
   {
-    "id": 6,
+    "id": 6, "category": "beginner",
     "title": "Top Row: E and I",
     "description": "Reach up from D and K to type E and I.",
     "keys": ["e", "i", "d", "k", "f", "j"],
     "fingers": { "e": "left-middle", "i": "right-middle" },
-    "lines": [
-      "e i e i e i e i",
-      "de ki de ki de ki",
-      "fed jik fed jik",
-      "fie die fie die"
-    ]
+    "lines": ["e i e i e i e i", "de ki de ki de ki", "fed jik fed jik", "fie die fie die"]
   },
   {
-    "id": 7,
+    "id": 7, "category": "beginner",
     "title": "Top Row: R and U",
     "description": "Reach up from F and J to type R and U.",
     "keys": ["r", "u", "e", "i", "d", "k", "f", "j"],
     "fingers": { "r": "left-index", "u": "right-index" },
-    "lines": [
-      "r u r u r u r u",
-      "fr ju fr ju fr ju",
-      "rue fur rue fur rue",
-      "rude dure rude dure"
-    ]
+    "lines": ["r u r u r u r u", "fr ju fr ju fr ju", "rue fur rue fur rue", "rude dure rude dure"]
   },
   {
-    "id": 8,
+    "id": 8, "category": "beginner",
     "title": "Top Row: W and O",
     "description": "Reach up from S and L to type W and O.",
     "keys": ["w", "o", "r", "u", "e", "i"],
     "fingers": { "w": "left-ring", "o": "right-ring" },
-    "lines": [
-      "w o w o w o w o",
-      "sw lo sw lo sw lo",
-      "owe woe owe woe",
-      "wore word wore word"
-    ]
+    "lines": ["w o w o w o w o", "sw lo sw lo sw lo", "owe woe owe woe", "wore word wore word"]
   },
   {
-    "id": 9,
+    "id": 9, "category": "beginner",
     "title": "Top Row: Q and P",
     "description": "Reach up from A and ; to type Q and P.",
     "keys": ["q", "p", "w", "o", "r", "u", "e", "i"],
     "fingers": { "q": "left-pinky", "p": "right-pinky" },
-    "lines": [
-      "q p q p q p q p",
-      "aq ;p aq ;p aq ;p",
-      "pew quick pew quick",
-      "rope pour rope pour"
-    ]
+    "lines": ["q p q p q p q p", "aq ;p aq ;p aq ;p", "pew quick pew quick", "rope pour rope pour"]
   },
   {
-    "id": 10,
+    "id": 10, "category": "beginner",
     "title": "Top Row Words",
     "description": "Practice real words using top and home rows.",
-    "keys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "j", "k", "l", ";"],
+    "keys": ["q","w","e","r","t","y","u","i","o","p","a","s","d","f","j","k","l",";"],
     "fingers": {},
-    "lines": [
-      "word rope pour quip",
-      "fire wide joke lure",
-      "pure disk folk asker",
-      "work hard type well"
-    ]
+    "lines": ["word rope pour quip", "fire wide joke lure", "pure disk folk asker", "work hard type well"]
   },
   {
-    "id": 11,
+    "id": 11, "category": "beginner",
     "title": "Bottom Row: V and M",
     "description": "Reach down from F and J to type V and M.",
     "keys": ["v", "m", "f", "j"],
     "fingers": { "v": "left-index", "m": "right-index" },
-    "lines": [
-      "v m v m v m v m",
-      "fv jm fv jm fv jm",
-      "vim vim vim vim",
-      "move vim move vim"
-    ]
+    "lines": ["v m v m v m v m", "fv jm fv jm fv jm", "vim vim vim vim", "move vim move vim"]
   },
   {
-    "id": 12,
+    "id": 12, "category": "beginner",
     "title": "Bottom Row: C and Comma",
     "description": "Reach down from D and K to type C and comma.",
     "keys": ["c", ",", "v", "m"],
     "fingers": { "c": "left-middle", ",": "right-middle" },
-    "lines": [
-      "c , c , c , c ,",
-      "dc k, dc k, dc k,",
-      "civic,mic, civic,",
-      "come, make, come,"
-    ]
+    "lines": ["c , c , c , c ,", "dc k, dc k, dc k,", "civic, mic, civic,", "come, make, come,"]
   },
   {
-    "id": 13,
+    "id": 13, "category": "beginner",
     "title": "Bottom Row: X and Period",
     "description": "Reach down from S and L for X and period.",
     "keys": ["x", ".", "c", ","],
     "fingers": { "x": "left-ring", ".": "right-ring" },
-    "lines": [
-      "x . x . x . x .",
-      "sx l. sx l. sx l.",
-      "fix. mix. fix. mix.",
-      "next. exit. next."
-    ]
+    "lines": ["x . x . x . x .", "sx l. sx l. sx l.", "fix. mix. fix. mix.", "next. exit. next."]
   },
   {
-    "id": 14,
+    "id": 14, "category": "beginner",
     "title": "Bottom Row: Z and Slash",
     "description": "Reach down from A and ; for Z and slash.",
     "keys": ["z", "/", "x", "."],
     "fingers": { "z": "left-pinky", "/": "right-pinky" },
-    "lines": [
-      "z / z / z / z /",
-      "az ;/ az ;/ az ;/",
-      "zero/zip zero/zip",
-      "fizz/buzz fizz/buzz"
-    ]
+    "lines": ["z / z / z / z /", "az ;/ az ;/ az ;/", "zero/zip zero/zip", "fizz/buzz fizz/buzz"]
   },
   {
-    "id": 15,
-    "title": "T and Y - Index Reach",
+    "id": 15, "category": "beginner",
+    "title": "T and Y — Index Reach",
     "description": "Reach up-center from F and J for T and Y.",
     "keys": ["t", "y"],
     "fingers": { "t": "left-index", "y": "right-index" },
-    "lines": [
-      "t y t y t y t y",
-      "ft jy ft jy ft jy",
-      "try yet try yet",
-      "they type they type"
-    ]
+    "lines": ["t y t y t y t y", "ft jy ft jy ft jy", "try yet try yet", "they type they type"]
   },
   {
-    "id": 16,
-    "title": "G and H - Index Center",
+    "id": 16, "category": "beginner",
+    "title": "G and H — Index Center",
     "description": "Reach inward from F and J for G and H.",
     "keys": ["g", "h"],
     "fingers": { "g": "left-index", "h": "right-index" },
-    "lines": [
-      "g h g h g h g h",
-      "fg jh fg jh fg jh",
-      "high high high",
-      "ghost the ghost the"
-    ]
+    "lines": ["g h g h g h g h", "fg jh fg jh fg jh", "high high high", "ghost the ghost the"]
   },
   {
-    "id": 17,
-    "title": "B and N - Index Reach Down",
+    "id": 17, "category": "beginner",
+    "title": "B and N — Index Reach Down",
     "description": "Reach down-center from F and J for B and N.",
     "keys": ["b", "n"],
     "fingers": { "b": "left-index", "n": "right-index" },
-    "lines": [
-      "b n b n b n b n",
-      "fb jn fb jn fb jn",
-      "bind bond bind bond",
-      "brown noun brown noun"
-    ]
+    "lines": ["b n b n b n b n", "fb jn fb jn fb jn", "bind bond bind bond", "brown noun brown noun"]
   },
   {
-    "id": 18,
+    "id": 18, "category": "beginner",
     "title": "Full Alphabet",
     "description": "You know all the letters! Practice common words.",
     "keys": ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
     "fingers": {},
-    "lines": [
-      "the quick brown fox",
-      "jumps over the lazy",
-      "dog and cat play with",
-      "joy every single day"
-    ]
+    "lines": ["the quick brown fox", "jumps over the lazy", "dog and cat play with", "joy every single day"]
   },
   {
-    "id": 19,
+    "id": 19, "category": "beginner",
     "title": "Common Words",
     "description": "Type the most common English words.",
-    "keys": [],
-    "fingers": {},
-    "lines": [
-      "the of and to in is",
-      "you that it he was for",
-      "on are as with his they",
-      "at be this from or one"
-    ]
+    "keys": [], "fingers": {},
+    "lines": ["the of and to in is", "you that it he was for", "on are as with his they", "at be this from or one"]
   },
   {
-    "id": 20,
-    "title": "Numbers Row: 1-5",
+    "id": 20, "category": "beginner",
+    "title": "Numbers Row: 1–5",
     "description": "Reach up from the top row for numbers 1 through 5.",
     "keys": ["1","2","3","4","5"],
     "fingers": { "1": "left-pinky", "2": "left-ring", "3": "left-middle", "4": "left-index", "5": "left-index" },
-    "lines": [
-      "1 2 3 4 5 1 2 3 4 5",
-      "11 22 33 44 55",
-      "123 321 123 321",
-      "12345 54321 12345"
-    ]
+    "lines": ["1 2 3 4 5 1 2 3 4 5", "11 22 33 44 55", "123 321 123 321", "12345 54321 12345"]
   },
   {
-    "id": 21,
-    "title": "Numbers Row: 6-0",
+    "id": 21, "category": "beginner",
+    "title": "Numbers Row: 6–0",
     "description": "Reach up from the top row for numbers 6 through 0.",
     "keys": ["6","7","8","9","0"],
     "fingers": { "6": "right-index", "7": "right-index", "8": "right-middle", "9": "right-ring", "0": "right-pinky" },
-    "lines": [
-      "6 7 8 9 0 6 7 8 9 0",
-      "66 77 88 99 00",
-      "678 987 678 987",
-      "67890 09876 67890"
-    ]
+    "lines": ["6 7 8 9 0 6 7 8 9 0", "66 77 88 99 00", "678 987 678 987", "67890 09876 67890"]
   },
   {
-    "id": 22,
-    "title": "Sentences",
+    "id": 22, "category": "beginner",
+    "title": "First Sentences",
     "description": "Type complete sentences with proper spacing.",
-    "keys": [],
-    "fingers": {},
-    "lines": [
-      "I like to type fast.",
-      "Practice makes perfect.",
-      "Keep your eyes on screen.",
-      "Type with all ten fingers."
-    ]
+    "keys": [], "fingers": {},
+    "lines": ["I like to type fast.", "Practice makes perfect.", "Keep your eyes on screen.", "Type with all ten fingers."]
+  },
+
+  {
+    "id": 23, "category": "practice",
+    "title": "Capital Letters",
+    "description": "Hold Shift to type capital letters with the opposite hand.",
+    "keys": [], "fingers": {},
+    "lines": ["Alice Bob Carl Dana Eve", "Monday Tuesday Wednesday", "Paris London Tokyo Seoul", "Hello World Type Fast"]
+  },
+  {
+    "id": 24, "category": "practice",
+    "title": "Punctuation: . , ! ?",
+    "description": "End sentences with the right punctuation mark.",
+    "keys": [], "fingers": {},
+    "lines": ["Hello, how are you today?", "I am fine, thank you!", "What time is it, please?", "Let us go. It is late now."]
+  },
+  {
+    "id": 25, "category": "practice",
+    "title": "Punctuation: : ; ' \"",
+    "description": "Practice less common but important punctuation.",
+    "keys": [], "fingers": {},
+    "lines": ["It's a beautiful morning.", "She said: \"Let's begin.\"", "Ready; set; go! Type now.", "Don't stop; keep going on."]
+  },
+  {
+    "id": 26, "category": "practice",
+    "title": "Short Phrases",
+    "description": "Common phrases used every day.",
+    "keys": [], "fingers": {},
+    "lines": ["good morning, have a great day", "see you later, take care friend", "well done, you did a great job", "keep going, you are doing well"]
+  },
+  {
+    "id": 27, "category": "practice",
+    "title": "Simple Sentences I",
+    "description": "Short, clear sentences to build your flow.",
+    "keys": [], "fingers": {},
+    "lines": ["The dog runs fast in the park.", "She sings a sweet lullaby song.", "We eat lunch at noon together.", "Birds fly high in the blue sky."]
+  },
+  {
+    "id": 28, "category": "practice",
+    "title": "Simple Sentences II",
+    "description": "More short sentences — focus on rhythm.",
+    "keys": [], "fingers": {},
+    "lines": ["Rain falls soft on the green grass.", "Stars shine bright in the dark night.", "The cat curled up on the warm mat.", "He read a book beside the window."]
+  },
+  {
+    "id": 29, "category": "practice",
+    "title": "Questions",
+    "description": "Asking questions requires a shift of thinking.",
+    "keys": [], "fingers": {},
+    "lines": ["Where did you put the red box?", "How long will the trip take us?", "What is your favorite color now?", "Can you help me find my lost book?"]
+  },
+  {
+    "id": 30, "category": "practice",
+    "title": "Numbers in Context",
+    "description": "Numbers appear in real text — practice them naturally.",
+    "keys": [], "fingers": {},
+    "lines": ["I have 3 cats and 2 dogs at home.", "She turns 10 years old next Monday.", "Buy 5 apples and 4 oranges please.", "The train leaves platform 7 at 8:30."]
+  },
+  {
+    "id": 31, "category": "practice",
+    "title": "Everyday Life",
+    "description": "Sentences from daily conversation.",
+    "keys": [], "fingers": {},
+    "lines": ["Please pass the salt, thank you.", "I would like a cup of green tea.", "Could you speak a little slower?", "Excuse me, do you have the time?"]
+  },
+  {
+    "id": 32, "category": "practice",
+    "title": "Nature and Weather",
+    "description": "Descriptive sentences about the world around us.",
+    "keys": [], "fingers": {},
+    "lines": ["The sun set behind the tall mountains.", "A gentle breeze cooled the warm air.", "Autumn leaves drifted down the path.", "Fresh snow covered the quiet village."]
+  },
+  {
+    "id": 33, "category": "practice",
+    "title": "About Typing",
+    "description": "Sentences that remind you of good typing habits.",
+    "keys": [], "fingers": {},
+    "lines": ["Keep your fingers on the home row.", "Look at the screen, not your hands.", "Accuracy matters more than speed now.", "Relax your wrists while you type."]
+  },
+  {
+    "id": 34, "category": "practice",
+    "title": "Mixed Practice I",
+    "description": "A mix of everything learned so far.",
+    "keys": [], "fingers": {},
+    "lines": ["Every expert was once a beginner.", "Practice a little bit every single day.", "Your fingers will learn the positions.", "Soon you will type without thinking hard."]
+  },
+  {
+    "id": 35, "category": "practice",
+    "title": "Mixed Practice II",
+    "description": "Keep building — longer and more varied text.",
+    "keys": [], "fingers": {},
+    "lines": ["Learning a skill takes time and patience.", "Small steps forward lead to great success.", "Celebrate each milestone along your journey.", "You are getting better with every session!"]
+  },
+  {
+    "id": 36, "category": "practice",
+    "title": "A Short Story",
+    "description": "Type a short story from start to finish.",
+    "keys": [], "fingers": {},
+    "lines": ["Once there was a small red fox.", "The fox loved to run in the woods.", "One day, it found a golden key.", "The key opened a magical old door."]
+  },
+  {
+    "id": 37, "category": "practice",
+    "title": "Technology Words",
+    "description": "Common tech vocabulary you will type often.",
+    "keys": [], "fingers": {},
+    "lines": ["website app keyboard screen mouse click", "browser download upload file save open", "email message reply forward delete send", "login password username profile settings"]
+  },
+
+  {
+    "id": 38, "category": "speed",
+    "title": "Top 30 Words Sprint",
+    "description": "The most common English words — type them fast.",
+    "keys": [], "fingers": {},
+    "lines": ["the be to of and a in is it that", "for on are with as at this have from or", "one had by word but not what all were we", "when your can said will there use each which"]
+  },
+  {
+    "id": 39, "category": "speed",
+    "title": "Short Word Burst",
+    "description": "Short words flow fast — build your rhythm.",
+    "keys": [], "fingers": {},
+    "lines": ["go do it at me he to be by us", "up on in of or as if an so my", "we no am hi ok yes ago big old new", "far few fly got had him job key lay met"]
+  },
+  {
+    "id": 40, "category": "speed",
+    "title": "Medium Words",
+    "description": "Three to six letter words — the backbone of English.",
+    "keys": [], "fingers": {},
+    "lines": ["about after again other right place", "world still learn every never close", "those large often above until while", "bring found given hands heart light"]
+  },
+  {
+    "id": 41, "category": "speed",
+    "title": "Long Words",
+    "description": "Challenge your fingers with longer words.",
+    "keys": [], "fingers": {},
+    "lines": ["beautiful important different together", "everything remember something wonderful", "understand knowledge government question", "experience comfortable communication"]
+  },
+  {
+    "id": 42, "category": "speed",
+    "title": "Pangrams",
+    "description": "Sentences using every letter — a classic speed drill.",
+    "keys": [], "fingers": {},
+    "lines": ["The quick brown fox jumps over the lazy dog.", "Pack my box with five dozen liquor jugs.", "How vexingly quick daft zebras jump now.", "The five boxing wizards jump very quickly."]
+  },
+  {
+    "id": 43, "category": "speed",
+    "title": "Common Phrases Sprint",
+    "description": "Phrases you type every day — make them automatic.",
+    "keys": [], "fingers": {},
+    "lines": ["as soon as possible, thank you very much", "have a nice day and see you later then", "I appreciate your help, well done indeed", "please let me know if you need anything"]
+  },
+  {
+    "id": 44, "category": "speed",
+    "title": "Days and Months",
+    "description": "Calendar words come up constantly — own them.",
+    "keys": [], "fingers": {},
+    "lines": ["Monday Tuesday Wednesday Thursday Friday", "Saturday Sunday January February March", "April May June July August September", "October November December Spring Summer"]
+  },
+  {
+    "id": 45, "category": "speed",
+    "title": "Mixed Case Sprint",
+    "description": "Real text mixes capital and lower case — stay sharp.",
+    "keys": [], "fingers": {},
+    "lines": ["JavaScript Python HTML CSS React Vue", "GitHub Twitter YouTube Netflix Amazon", "The Earth orbits The Sun every 365 days.", "Dr. Smith called at 9 AM on Thursday."]
+  },
+  {
+    "id": 46, "category": "speed",
+    "title": "Inspirational Quotes I",
+    "description": "Great words to type at great speed.",
+    "keys": [], "fingers": {},
+    "lines": ["The journey of a thousand miles begins", "with a single step taken in courage.", "In the middle of every difficulty", "lies a great and hidden opportunity."]
+  },
+  {
+    "id": 47, "category": "speed",
+    "title": "Inspirational Quotes II",
+    "description": "More wisdom — more words per minute.",
+    "keys": [], "fingers": {},
+    "lines": ["It does not matter how slowly you go,", "as long as you do not stop moving.", "Success is the sum of small efforts", "repeated day in and day out for years."]
+  },
+  {
+    "id": 48, "category": "speed",
+    "title": "Tech and Science",
+    "description": "Vocabulary from the digital and scientific world.",
+    "keys": [], "fingers": {},
+    "lines": ["algorithm database function variable loop", "interface framework library deployment host", "photosynthesis atmosphere gravitational wave", "quantum encryption neural network protocol"]
+  },
+  {
+    "id": 49, "category": "speed",
+    "title": "Code Patterns",
+    "description": "Programmers type symbols and keywords constantly.",
+    "keys": [], "fingers": {},
+    "lines": ["if (x > 0) { return true; }", "const name = 'hello world';", "for (let i = 0; i < 10; i++)", "console.log('typing is fun!');"]
+  },
+  {
+    "id": 50, "category": "speed",
+    "title": "Long Passage",
+    "description": "Sustain your speed through a full paragraph.",
+    "keys": [], "fingers": {},
+    "lines": ["Touch typing is a method of typing without", "looking at the keyboard. It relies on muscle", "memory to find keys and lets you focus fully", "on the text. Practice daily to reach mastery."]
+  },
+  {
+    "id": 51, "category": "speed",
+    "title": "Speed Drill: Rows",
+    "description": "Pure finger speed — row-by-row muscle memory.",
+    "keys": [], "fingers": {},
+    "lines": ["asdf jkl; asdf jkl; asdf jkl;", "qwer uiop qwer uiop qwer uiop", "zxcv nm,. zxcv nm,. zxcv nm,.", "asdf ghjk l;qw erui opzx cvbn"]
+  },
+  {
+    "id": 52, "category": "speed",
+    "title": "Grand Speed Test",
+    "description": "Everything you know — go as fast as you can!",
+    "keys": [], "fingers": {},
+    "lines": ["To be or not to be, that is the question.", "All that glitters is not gold, my dear friend.", "The fastest typists exceed 200 words per minute.", "Train daily: accuracy first, then build your speed."]
   }
 ]
