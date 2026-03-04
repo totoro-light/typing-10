@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1a1a2e"/>
+
+  <!-- Accent bar top -->
+  <rect width="1200" height="8" fill="#FFE566"/>
+
+  <!-- Large keyboard icon -->
+  <rect x="80" y="160" width="380" height="240" rx="28" fill="#16213e" stroke="#FFE566" stroke-width="4"/>
+
+  <!-- Key rows in icon -->
+  <!-- Row 1 -->
+  <rect x="100" y="180" width="42" height="32" rx="6" fill="#FFE566" opacity="0.9"/>
+  <rect x="152" y="180" width="42" height="32" rx="6" fill="#FFE566" opacity="0.9"/>
+  <rect x="204" y="180" width="42" height="32" rx="6" fill="#FFE566" opacity="0.9"/>
+  <rect x="256" y="180" width="42" height="32" rx="6" fill="#FFE566" opacity="0.9"/>
+  <rect x="308" y="180" width="42" height="32" rx="6" fill="#FFE566" opacity="0.9"/>
+  <rect x="360" y="180" width="82" height="32" rx="6" fill="#FFE566" opacity="0.5"/>
+
+  <!-- Row 2 (home row) -->
+  <rect x="100" y="224" width="42" height="32" rx="6" fill="#e74c3c" opacity="0.9"/>
+  <rect x="152" y="224" width="42" height="32" rx="6" fill="#e67e22" opacity="0.9"/>
+  <rect x="204" y="224" width="42" height="32" rx="6" fill="#27ae60" opacity="0.9"/>
+  <rect x="256" y="224" width="42" height="32" rx="6" fill="#2980b9" opacity="0.9"/>
+  <rect x="308" y="224" width="42" height="32" rx="6" fill="#8e44ad" opacity="0.9"/>
+  <rect x="360" y="224" width="82" height="32" rx="6" fill="#16a085" opacity="0.9"/>
+
+  <!-- Row 3 -->
+  <rect x="100" y="268" width="42" height="32" rx="6" fill="#FFE566" opacity="0.6"/>
+  <rect x="152" y="268" width="42" height="32" rx="6" fill="#FFE566" opacity="0.6"/>
+  <rect x="204" y="268" width="42" height="32" rx="6" fill="#FFE566" opacity="0.6"/>
+  <rect x="256" y="268" width="42" height="32" rx="6" fill="#FFE566" opacity="0.6"/>
+  <rect x="308" y="268" width="42" height="32" rx="6" fill="#FFE566" opacity="0.6"/>
+  <rect x="360" y="268" width="82" height="32" rx="6" fill="#FFE566" opacity="0.3"/>
+
+  <!-- Spacebar -->
+  <rect x="150" y="312" width="250" height="32" rx="6" fill="#FFE566" opacity="0.4"/>
+
+  <!-- Text content -->
+  <text x="520" y="220" font-family="Segoe UI, system-ui, sans-serif" font-size="72" font-weight="bold" fill="#FFE566">Typing</text>
+  <text x="520" y="310" font-family="Segoe UI, system-ui, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Practice</text>
+
+  <text x="520" y="380" font-family="Segoe UI, system-ui, sans-serif" font-size="28" fill="#8892a4">Learn to type with all ten fingers.</text>
+  <text x="520" y="420" font-family="Segoe UI, system-ui, sans-serif" font-size="28" fill="#8892a4">Step-by-step lessons. Free &amp; offline.</text>
+
+  <!-- Badge -->
+  <rect x="520" y="460" width="200" height="44" rx="22" fill="#FFE566"/>
+  <text x="620" y="489" font-family="Segoe UI, system-ui, sans-serif" font-size="22" font-weight="bold" fill="#1a1a2e" text-anchor="middle">Start Learning</text>
+
+  <!-- Accent bar bottom -->
+  <rect y="622" width="1200" height="8" fill="#e94560"/>
+</svg>
