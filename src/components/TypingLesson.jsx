@@ -51,6 +51,10 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
   const [now, setNow] = useState(Date.now())
   const errorsRef = useRef(0)
   const inputRef = useRef(null)
+  // Refs keep handleKeyDown stable so the window listener never needs re-registering
+  const typedRef = useRef('')
+  const startTimeRef = useRef(null)
+  const finishedRef = useRef(false)
 
   const currentChar = fullText[typed.length] ?? ''
   const currentKey  = currentChar === '\n' ? 'enter' : currentChar
@@ -65,16 +69,24 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
 
   useEffect(() => { inputRef.current?.focus() }, [])
 
+  // Stable handler – reads from refs so it never goes stale
   const handleKeyDown = useCallback((e) => {
-    if (finished) return
+    if (finishedRef.current) return
     if (['Shift','Control','Alt','Meta','CapsLock'].includes(e.key)) return
 
-    if (!startTime) setStartTime(Date.now())
+    if (!startTimeRef.current) {
+      const t = Date.now()
+      startTimeRef.current = t
+      setStartTime(t)
+    }
 
-    const expected = fullText[typed.length]
+    const currentTyped = typedRef.current
+    const expected = fullText[currentTyped.length]
 
     if (e.key === 'Backspace') {
-      setTyped(t => t.slice(0, -1))
+      const next = currentTyped.slice(0, -1)
+      typedRef.current = next
+      setTyped(next)
       setPressedKey('backspace')
       setTimeout(() => setPressedKey(null), 120)
       return
@@ -82,21 +94,25 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
 
     let char = e.key
     if (e.key === 'Enter') char = '\n'
+    // Ignore non-printable / multi-char key names
+    if (char.length > 1) return
 
     setPressedKey(char === '\n' ? 'enter' : char)
     setTimeout(() => setPressedKey(null), 120)
 
     if (char === expected) {
-      const next = typed + char
+      const next = currentTyped + char
+      typedRef.current = next
       setTyped(next)
       if (next.length === fullText.length) {
-        const elapsed = (Date.now() - startTime) / 1000 / 60
+        const elapsed = (Date.now() - startTimeRef.current) / 1000 / 60
         const words = fullText.trim().split(/\s+/).length
         const wpm = Math.max(1, Math.round(words / Math.max(elapsed, 0.01)))
         const totalKeystrokes = fullText.length + errorsRef.current
         const accuracy = Math.round((fullText.length / totalKeystrokes) * 100)
         const stats = { wpm, accuracy }
         setFinalStats(stats)
+        finishedRef.current = true
         setFinished(true)
         completeLesson(user, lessonId, stats)
         onComplete && onComplete(stats)
@@ -104,8 +120,9 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
     } else {
       errorsRef.current++
     }
-  }, [finished, fullText, startTime, typed, user, lessonId, onComplete])
+  }, [fullText, user, lessonId, onComplete])
 
+  // Register once – stable handler means no churn on every keystroke
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
@@ -198,8 +215,10 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
               </div>
               <div className="fc-actions">
                 <button className="btn-primary" onClick={() => {
+                  typedRef.current = ''; startTimeRef.current = null; finishedRef.current = false
                   setTyped(''); setStartTime(null); setFinished(false)
                   setFinalStats(null); errorsRef.current = 0
+                  inputRef.current && inputRef.current.focus()
                 }}>Try Again</button>
                 {nextLesson && (
                   <button className="btn-primary" style={{ background: 'var(--blue)', boxShadow: '0 4px 16px rgba(58,174,232,.35)' }}
@@ -214,8 +233,14 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
         ) : (
           <div className="text-display">{renderText()}</div>
         )}
-        <input ref={inputRef} className="hidden-input" readOnly
-          onBlur={() => setTimeout(() => inputRef.current?.focus(), 100)} />
+        <input
+          ref={inputRef}
+          className="hidden-input"
+          autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false}
+          onKeyDown={(e) => { e.stopPropagation(); handleKeyDown(e) }}
+          onChange={(e) => { e.target.value = '' }}
+          onBlur={() => setTimeout(() => inputRef.current && inputRef.current.focus(), 100)}
+        />
       </div>
 
       <div className="bottom-panel">
