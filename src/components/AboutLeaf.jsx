@@ -93,14 +93,23 @@ export default function AboutLeaf() {
               </ul>
             </div>
 
-            <a
-              className="leaf-link"
-              href="https://github.com/totoro-light/typing-10"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View source on GitHub ↗
-            </a>
+            <div className="leaf-footer">
+              <a
+                className="leaf-link"
+                href="https://github.com/totoro-light/typing-10"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source on GitHub ↗
+              </a>
+              <span className="leaf-footer-sep">·</span>
+              <a
+                className="leaf-link"
+                href="mailto:ethanstark.mars@gmail.com"
+              >
+                ethanstark.mars@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       )}
