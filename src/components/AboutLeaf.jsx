@@ -79,7 +79,8 @@ export default function AboutLeaf() {
 
             <h2 className="leaf-title">Typing Practice</h2>
             <p className="leaf-subtitle">
-              A free, step-by-step typing tutor for kids and beginners.
+              A free typing practice app for all skill levels —<br />
+              from first-time learners to speed-focused masters.
             </p>
 
             <div className="leaf-section">

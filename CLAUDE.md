@@ -32,7 +32,7 @@ All commits **must** follow [Conventional Commits](https://www.conventionalcommi
 ```
 feat(lessons): add capital letters lesson
 fix(keyboard): correct finger assignment for Y key
-style(lesson-map): increase card font size for kids
+style(lesson-map): increase card font size for readability
 ci: update Node version to 22 in deploy workflow
 ```
 
