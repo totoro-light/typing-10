@@ -40,12 +40,14 @@ export default function App() {
   if (lessonId) {
     return (
       <><TypingLesson
+        key={lessonId}
         lessonId={lessonId}
         user={user}
         theme={theme}
         onThemeChange={handleThemeChange}
         onBack={() => setLessonId(null)}
-        onComplete={() => setLessonId(null)}
+        onNext={() => setLessonId(lessonId + 1)}
+        onPrevious={() => setLessonId(lessonId - 1)}
       /><AboutLeaf /></>
     )
   }

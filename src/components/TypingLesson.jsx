@@ -38,9 +38,10 @@ function congratsMsg(accuracy) {
   return 'Keep practicing! 💪'
 }
 
-export default function TypingLesson({ lessonId, user, theme, onThemeChange, onBack, onComplete }) {
+export default function TypingLesson({ lessonId, user, theme, onThemeChange, onBack, onNext, onPrevious }) {
   const lesson = lessons.find(l => l.id === lessonId)
   const nextLesson = lessons.find(l => l.id === lessonId + 1)
+  const prevLesson = lessons.find(l => l.id === lessonId - 1)
   const fullText = lesson.lines.join('\n')
 
   const [typed, setTyped] = useState('')
@@ -55,6 +56,13 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
   const typedRef = useRef('')
   const startTimeRef = useRef(null)
   const finishedRef = useRef(false)
+  // Refs for popup navigation callbacks so handleKeyDown can call them without deps churn
+  const onNextRef = useRef(onNext)
+  const onPreviousRef = useRef(onPrevious)
+  const onBackRef = useRef(onBack)
+  useEffect(() => { onNextRef.current = onNext }, [onNext])
+  useEffect(() => { onPreviousRef.current = onPrevious }, [onPrevious])
+  useEffect(() => { onBackRef.current = onBack }, [onBack])
 
   const currentChar = fullText[typed.length] ?? ''
   const currentKey  = currentChar === '\n' ? 'enter' : currentChar
@@ -71,7 +79,19 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
 
   // Stable handler – reads from refs so it never goes stale
   const handleKeyDown = useCallback((e) => {
-    if (finishedRef.current) return
+    if (finishedRef.current) {
+      const k = e.key.toLowerCase()
+      if (k === 'n' && nextLesson) { onNextRef.current(); return }
+      if (k === 'p' && prevLesson) { onPreviousRef.current(); return }
+      if (k === 'c') { onBackRef.current(); return }
+      if (k === 'r') {
+        typedRef.current = ''; startTimeRef.current = null; finishedRef.current = false
+        setTyped(''); setStartTime(null); setFinished(false)
+        setFinalStats(null); errorsRef.current = 0
+        inputRef.current?.focus()
+      }
+      return
+    }
     if (['Shift','Control','Alt','Meta','CapsLock'].includes(e.key)) return
 
     if (!startTimeRef.current) {
@@ -115,18 +135,24 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
         finishedRef.current = true
         setFinished(true)
         completeLesson(user, lessonId, stats)
-        onComplete && onComplete(stats)
       }
     } else {
       errorsRef.current++
     }
-  }, [fullText, user, lessonId, onComplete])
+  }, [fullText, user, lessonId])
 
   // Register once – stable handler means no churn on every keystroke
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [handleKeyDown])
+
+  function handleReplay() {
+    typedRef.current = ''; startTimeRef.current = null; finishedRef.current = false
+    setTyped(''); setStartTime(null); setFinished(false)
+    setFinalStats(null); errorsRef.current = 0
+    inputRef.current?.focus()
+  }
 
   function renderText() {
     const lines = fullText.split('\n')
@@ -214,19 +240,23 @@ export default function TypingLesson({ lessonId, user, theme, onThemeChange, onB
                 </div>
               </div>
               <div className="fc-actions">
-                <button className="btn-primary" onClick={() => {
-                  typedRef.current = ''; startTimeRef.current = null; finishedRef.current = false
-                  setTyped(''); setStartTime(null); setFinished(false)
-                  setFinalStats(null); errorsRef.current = 0
-                  inputRef.current && inputRef.current.focus()
-                }}>Try Again</button>
-                {nextLesson && (
-                  <button className="btn-primary" style={{ background: 'var(--blue)', boxShadow: '0 4px 16px rgba(58,174,232,.35)' }}
-                    onClick={() => onComplete()}>
-                    Next Lesson →
+                {prevLesson && (
+                  <button className="btn-secondary" onClick={onPrevious}>
+                    ← <u>P</u>revious
                   </button>
                 )}
-                <button className="btn-secondary" onClick={onBack}>All Lessons</button>
+                <button className="btn-secondary" onClick={handleReplay}>
+                  <u>R</u>eplay
+                </button>
+                <button className="btn-secondary" onClick={onBack}>
+                  <u>C</u>lose
+                </button>
+                {nextLesson && (
+                  <button className="btn-primary" style={{ background: 'var(--blue)', boxShadow: '0 4px 16px rgba(58,174,232,.35)' }}
+                    onClick={onNext}>
+                    <u>N</u>ext →
+                  </button>
+                )}
               </div>
             </div>
           </div>
