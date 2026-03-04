@@ -98,9 +98,9 @@ export default function LessonMap({ user, theme, onThemeChange, onSelectLesson, 
                       <div className="lc-badge">{done ? '✓' : lesson.id}</div>
                       <div className="lc-info">
                         <div className="lc-title">{lesson.title}</div>
-                        {done && stats && (
-                          <div className="lc-stats">⭐ {stats.wpm} WPM · {stats.accuracy}%</div>
-                        )}
+                        <div className="lc-stats">
+                          {done && stats ? `⭐ ${stats.wpm} WPM · ${stats.accuracy}%` : ''}
+                        </div>
                       </div>
                       {done && <div className="lc-check">✓</div>}
                     </button>
