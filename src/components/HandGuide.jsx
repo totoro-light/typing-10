@@ -1,15 +1,17 @@
-// SVG hand diagrams showing which finger to use
 const FINGER_COLOR = {
-  'left-pinky':   '#e74c3c',
-  'left-ring':    '#e67e22',
-  'left-middle':  '#27ae60',
-  'left-index':   '#2980b9',
-  'right-index':  '#8e44ad',
-  'right-middle': '#16a085',
-  'right-ring':   '#d35400',
-  'right-pinky':  '#c0392b',
-  'thumb':        '#7f8c8d',
+  'left-pinky':   '#FF6FA0',
+  'left-ring':    '#FF9A30',
+  'left-middle':  '#3EBD73',
+  'left-index':   '#3AAEE8',
+  'right-index':  '#8B6FE8',
+  'right-middle': '#20BAA8',
+  'right-ring':   '#FFCB30',
+  'right-pinky':  '#FF6FA0',
+  'thumb':        '#A0A8C0',
 }
+
+const SKIN    = '#FFCBA4'
+const SKIN_DK = '#E8A882'
 
 function Hand({ side, activeFinger }) {
   const isLeft = side === 'left'
@@ -18,82 +20,74 @@ function Hand({ side, activeFinger }) {
     ? ['left-pinky','left-ring','left-middle','left-index']
     : ['right-index','right-middle','right-ring','right-pinky']
 
-  // x positions for fingers, palm centered at 100
-  const xPos = isLeft
-    ? [20, 50, 80, 110]
-    : [90, 120, 150, 180]
-
-  const thumbX = isLeft ? 115 : 75
-  const thumbSide = isLeft ? 'right-index' : 'left-index' // thumb approximation
+  // x positions of finger rectangles
+  const xs = isLeft ? [18, 52, 86, 120] : [80, 114, 148, 182]
+  const palmX = isLeft ? 18 : 18
   const thumbActive = activeFinger === 'thumb'
 
+  function fingerFill(f) {
+    return activeFinger === f ? FINGER_COLOR[f] : SKIN
+  }
+  function fingerStroke(f) {
+    return activeFinger === f ? FINGER_COLOR[f] : SKIN_DK
+  }
+
   return (
-    <svg
-      viewBox="0 0 200 220"
-      width="140"
-      height="154"
-      className={`hand-svg hand-${side}`}
-    >
+    <svg viewBox="0 0 210 200" width="130" height="124" className="hand-svg">
       {/* Palm */}
-      <rect
-        x={isLeft ? 20 : 20}
-        y={130}
-        width={160}
-        height={70}
-        rx={20}
-        fill="#f5cba7"
-        stroke="#d4a574"
-        strokeWidth="2"
-      />
+      <rect x={isLeft ? 18 : 18} y={120} width={160} height={62} rx={20}
+        fill={SKIN} stroke={SKIN_DK} strokeWidth="1.5" />
 
       {/* Thumb */}
       <rect
-        x={isLeft ? 148 : 18}
-        y={148}
-        width={28}
-        height={50}
-        rx={12}
-        fill={thumbActive ? FINGER_COLOR['thumb'] : '#f5cba7'}
-        stroke={thumbActive ? FINGER_COLOR['thumb'] : '#d4a574'}
-        strokeWidth="2"
+        x={isLeft ? 155 : 18} y={138} width={32} height={48} rx={14}
+        fill={thumbActive ? FINGER_COLOR['thumb'] : SKIN}
+        stroke={thumbActive ? FINGER_COLOR['thumb'] : SKIN_DK}
+        strokeWidth="1.5"
       />
+      {thumbActive && (
+        <rect x={isLeft ? 155 : 18} y={138} width={32} height={48} rx={14}
+          fill={FINGER_COLOR['thumb']} opacity="0.3" />
+      )}
 
       {/* Four fingers */}
       {fingers.map((finger, i) => {
-        const x = isLeft ? xPos[i] : xPos[i]
         const isActive = activeFinger === finger
+        const x = xs[i]
+        const y = isActive ? 18 : 28
+        const h = isActive ? 108 : 98
         return (
-          <rect
-            key={finger}
-            x={x}
-            y={isActive ? 20 : 30}
-            width={30}
-            height={isActive ? 115 : 105}
-            rx={12}
-            fill={isActive ? FINGER_COLOR[finger] : '#f5cba7'}
-            stroke={isActive ? FINGER_COLOR[finger] : '#d4a574'}
-            strokeWidth="2"
-          />
+          <g key={finger}>
+            <rect x={x} y={y} width={30} height={h} rx={13}
+              fill={fingerFill(finger)}
+              stroke={fingerStroke(finger)}
+              strokeWidth="1.5"
+            />
+            {isActive && (
+              <rect x={x} y={y} width={30} height={h} rx={13}
+                fill={FINGER_COLOR[finger]} opacity="0.25" />
+            )}
+          </g>
         )
       })}
 
       {/* Label */}
-      <text x="100" y="215" textAnchor="middle" fontSize="12" fill="#666">
-        {isLeft ? 'Left Hand' : 'Right Hand'}
+      <text x="105" y="196" textAnchor="middle" fontSize="10" fill={SKIN_DK} fontFamily="system-ui">
+        {isLeft ? 'Left' : 'Right'}
       </text>
     </svg>
   )
 }
 
 export default function HandGuide({ activeFinger }) {
-  const leftFinger = activeFinger?.startsWith('left') ? activeFinger : null
+  const leftFinger  = activeFinger?.startsWith('left')  ? activeFinger : null
   const rightFinger = activeFinger?.startsWith('right') ? activeFinger : null
-  const thumbFinger = activeFinger === 'thumb' ? 'thumb' : null
+  const thumb       = activeFinger === 'thumb' ? 'thumb' : null
 
   return (
     <div className="hand-guide">
-      <Hand side="left" activeFinger={leftFinger || thumbFinger} />
-      <Hand side="right" activeFinger={rightFinger || thumbFinger} />
+      <Hand side="left"  activeFinger={leftFinger  || thumb} />
+      <Hand side="right" activeFinger={rightFinger || thumb} />
     </div>
   )
 }

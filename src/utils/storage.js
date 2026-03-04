@@ -27,13 +27,23 @@ export function saveUserData(name, data) {
   setRoot(root)
 }
 
+export function getUserSetting(name, key, defaultVal) {
+  const data = getUserData(name)
+  return key in data ? data[key] : defaultVal
+}
+
+export function setUserSetting(name, key, value) {
+  const data = getUserData(name)
+  data[key] = value
+  saveUserData(name, data)
+}
+
 export function completeLesson(name, lessonId, stats) {
   const data = getUserData(name)
   data.completedLessons[lessonId] = {
     ...stats,
     completedAt: Date.now(),
   }
-  // unlock next lesson
   if (lessonId >= data.currentLesson) {
     data.currentLesson = lessonId + 1
   }
