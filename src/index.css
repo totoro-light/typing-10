@@ -481,7 +481,7 @@ button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px }
   font-weight: 700;
   font-size: .92rem;
   line-height: 1.35;
-  min-height: calc(1.35em * 2);
+  height: calc(1.35em * 2);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -492,6 +492,9 @@ button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px }
   color: var(--card-color, var(--blue));
   margin-top: 3px;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .lc-check {
