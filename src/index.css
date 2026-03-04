@@ -477,7 +477,16 @@ button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px }
 }
 
 .lc-info { flex: 1; min-width: 0 }
-.lc-title { font-weight: 700; font-size: .92rem; line-height: 1.3 }
+.lc-title {
+  font-weight: 700;
+  font-size: .92rem;
+  line-height: 1.35;
+  min-height: calc(1.35em * 2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .lc-stats {
   font-size: .78rem;
   color: var(--card-color, var(--blue));
