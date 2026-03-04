@@ -15,6 +15,7 @@ const KEY_FINGER = {
   'z':'left-pinky','x':'left-ring','c':'left-middle','v':'left-index','b':'left-index',
   'n':'right-index','m':'right-index',',':'right-middle','.':'right-ring','/':'right-pinky',
   ' ':'thumb',
+  'enter':'right-pinky',
 }
 
 const THEME_OPTIONS = [
